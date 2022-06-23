@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数和实例的调用差异</title>
+</head>
+<body>
+    <!--TODO:需要理解什么是函数-->
+    <script>
+        'use strict' ;//如果使用严格模式，函数中的this是undefined
+    //    下面的函数其本质是一个构造函数，它的作用是创建一个对象
+        function  fn(name){
+            console.log(this);//this指向的是window
+            this.name = name;
+        }
+    //    new fn('默');//函数调用模式
+    const  f1 = new  fn('默');//实例调用模式，构造函数中的this指向的是实例对象
+    /*
+        class  App{
+            constructor(name){
+                console.log(this)；
+                this.name = name;
+            }
+        }
+        const a1   = new  App('React');
+    */
+    </script>    
+
+</body>
+</html>

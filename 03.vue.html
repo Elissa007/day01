@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue操作数据</title>
+    <!--vue的本质其实是一个class也就是类-->
+    <script src="http://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.js"></script>
+</head>
+<body>
+    <!--TODO：理解Vue的基本概念-->
+    <div id="root">{{msg}}</div>
+    <script>
+        // 类的实例化，类的参数传递
+        // 其实vue是一个class
+        new Vue({
+            el:'#root',//el是什么？element元素的意思，就是指定的DOM元素
+            data:{
+                msg:'hello  vue',
+            },
+        });
+    </script>    
+</body>
+</html>

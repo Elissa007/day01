@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery操作DOM</title>
+    <script src="https:cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        // TODO:jquery模式的数据操作
+        // 设置变量，让界面中的DOM元素显示指定的文本内容
+        // 需要通过DOM选择器进行查询，并且修改指定DOM的内容，当元素如过是成千上万的时候，器查询与修改的性能将会变得十分低下
+        let  msg = 'atguigu';
+        s('p').text(msg);
+    </script>
+</body>
+</html>

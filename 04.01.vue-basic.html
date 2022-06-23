@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue的基本用法</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.js"></script>
+</head>
+<body>
+    <!--TODO：如何使用VUe进行项目操作与数据显示-->
+    <!--在挂载点内部是可以使用Vue的-->
+    <!--模板语法：只不过在html标签中混入了一些特殊的语法啊，现在的语法结构是{{}}
+    专门来存放vue的数据的，并且他受到了vue的解析操作-->
+    <!--{{}}专业术语叫差值表达式-->
+    <div id="root">
+        <p>{{title}}</p>
+        <p>{{titlet.toUpperCase()}}</p>
+        <div>
+    <!--在挂载点外都是不可以使用vue的-->
+    <div id="root2">{{title}}<div>
+    <div id="root3">{{title}}<div>
+        <script>
+            // 为什么设置一个参数，而这个参数的类型是什么？应该是对象！
+            // 对象类型：无需对象
+            // 不建议设置成数组：有序数组
+            // 单一的参数？不合适，顺序不可变
+
+            new  Vue({
+                // el是一个css样式选择器，通过它来告诉vue只有在当前元素范围里才会受vue的控制
+                el:'#root',
+                // data的数据设置，现在的data其数据类型是Object对象类型
+                data:{
+                    title:'vue2',//data是vue存储数据的位置，这个数据的内容将会被应用于el元素当中
+
+                },
+            });
+        </script>
+
+    
+</body>
+</html>
