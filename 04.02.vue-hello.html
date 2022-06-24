@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue基础</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!--
+            TODO:理解插值表达式与语句差异
+            几个注意点：
+            1.Vue实例和容器是一一对应的，真实开发中一般只有一个Vue实例，且真实开发中会配合组件一起使用
+            2.data中的数据只要发生改变，模板中用到改数据的地方，就会自动更新
+            3.{{xxxx}}中的xxx要写js表达式，且xxx可以直接读取到data中配置的所有属性
+
+            注意分区：【js表达式】 与【js语句（代码）】
+            1.表达式：会产生一个值，可以放在任何一个需要值的地方
+                (1).100
+                (2).a
+                (3).demo()
+                (4).x === y?1:0
+                (5).200-2
+                (6).arr.map()
+            2.语句(代码)：不会产生值，只是控制代码走向
+                (1).if(){}
+                (2).for(){}
+                (3).try{}catch(err){}
+                等等。。。。
+        -->
+        <p>{{title}}</p>
+        <p>学校名称：</p>
+        <p>学校地址：</p>
+        <hr/>
+        <p>人名（大写）:</p>
+        <p>年龄(大1岁)：</p>
+        <p>判断成年:</p>
+        <p>数字显示:</p>
+        <p>数字相加:</p>
+        <p>字符拼接:</p>
+    </div>   
+    <script>
+        vue.config.productionTip = false;
+        new  Vue({
+            el:'#root',
+            data:{
+                title:'Vue2',
+                name:'尚硅谷',
+                address:'上海',
+                person:{
+                    name:'Vane',
+                    age:18,
+                },
+            },
+        });
+    </script> 
+</body>
+</html>
